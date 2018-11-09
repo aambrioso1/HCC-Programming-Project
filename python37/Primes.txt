@@ -1,0 +1,4 @@
+n=20
+for i in range(n);
+	a[i]=i
+	print(a[i])
