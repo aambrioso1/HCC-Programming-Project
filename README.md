@@ -1,2 +1,2 @@
 # HCC-Programming-Project
-Respository for programs and project for HCC ES.
+Respository for programs and projects for HCC Engineering Society
