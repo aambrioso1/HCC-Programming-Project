@@ -1,0 +1,30 @@
+#  Lesson for Friday May 17th:   Counting Neighbors on a Generalized Tictactoe Board
+
+#  Consider a n x n board consisting of squares that are either marked  x, an o, or blank.  Create a function that 
+#  counts the number of squares around the chosen square that are marked x, o, or blank.
+#  We adopt a data structure involving a matrix of integers and a system or keeping track of the squares.
+
+#  We will begin by having everyone write down an algorithm using plain language on paper.
+#  Bring some pape and a pencil or pen!!!
+#  We will discuss these algorithms and how to impliment them in Python.
+#  We will write the code for the algorithm and test it on a few boards.
+#  If there is time will be try reading example boards and square numbers from a file and writing the results to a file.
+
+#  Here is a sketch of the function definition will need to write.
+  
+#  def CountNeighbors(board, square):
+      # Some code here ...
+      # ...
+      #return [c1, c2, c3]
+      
+# Interesting question:  What should c1 + c2 + c3 equal?
+
+# We will chose a board and square to check our program.
+# bd = ExampleBoard
+# sq = ExampleSquare
+
+# We use are function to count neighbors
+# NeighborList = CountNeighbors(bd, sq)
+
+# We output th result.
+#  print(The number of o's, x's, and empty squares respectively is %i, %i, %i' % (NeighborList[0], NeighborList[1],NeighborList[2]))
