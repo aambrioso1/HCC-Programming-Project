@@ -1,14 +1,14 @@
 """
 The regular expressions operations (re) module is a standard Python
-library.  It is beautiful collection of operations for find and manipulating 
+library.  It is a beautiful collection of operations for finding and manipulating 
 matched text.  
 
 This program use the re library to search the text in a file, regex.txt, for 
 email addresses and phone numbers.  It copies
-them to a list called matches and prints then them 
-them neatly in a standard format.  The program has a string call text that 
-is commented out.   If you would like to avoid using a saved file as the text
-source for the program, remove the comments and comment out the line that opens 
+the emails and phone numbers it finds to a list called matches and prints 
+them out neatly in a standard format.  You can avoid using a saved file as the text
+source for the program.  The program has a string called text that 
+is commented out (sort of) by using triple quotes  Remove the triple quotes and comment out the line that opens 
 the regex.txt file.
 
 The program is a slight modification of a program found at 
