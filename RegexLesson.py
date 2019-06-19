@@ -9,7 +9,7 @@ them to a list called matches and prints then them
 them neatly in a standard format.  The program has a string call text that 
 is commented out.   If you would like to avoid using a saved file as the text
 source for the program, remove the comments and comment out the line that opens 
-the regex.txt file,
+the regex.txt file.
 
 The program is a slight modification of a program found at 
 https://automatetheboringstuff.com/chapter7/
@@ -27,14 +27,14 @@ with open('regex.txt') as f1: text=f1.read()
  
 """
 
-I have some text that can be used for demonstration purposes instead of read
-reading a text file from the local working directory.
+I have some text here that can be used for demonstration purposes instead of 
+reading a text file from the local current working directory.
 
 text =  'This text file contains a few emails addresses and phone numbers.   
 Alex phone is home number is 813-123-4567.
 He has two email addresses aambrioso@hccfl.edu and alexambrioso@gmail.com.
 Gregory has two phone nunbers:  (cell) (813) 685-1234 and work 253-7000 ext. 1234.
-His email address in Greg.Johnson@yahoo.com. 'Here are two email addresses aambrioso1@gmail.com and Erika.Ambrioso@fit.edu and several phone numbers (813)841-7072 and 813-842-7079, 841-7095, and 123-4567 ext. 789'
+His email address in Greg.Johnson@yahoo.com.'
 
 """
 
@@ -69,7 +69,7 @@ for groups in phoneRegex.findall(text):
 for groups in emailRegex.findall(text):
        matches.append(groups[0])
     
-# Neatly prints out emails and phone numbers founds 
+# Neatly prints out emails and phone numbers found 
 # in the regex.txt file.
 if len(matches) > 0:
     print('\n'.join(matches))
