@@ -15,7 +15,7 @@ Omce you create this file in the appropriate directoey you can run the program. 
 """
 
 """
-i thought it my be fun and practival to create quizzes on Python terms.  Here is a list of Python terms amd expressions that could be used to make such quizzes.   Cut and paste this list, or create your own,  to the text file.  Technically each lime should end in a mewline.  I am not sure if cut and paste will do this so keep that in mind if you use my list below.
+I thought it my be fun and practical to create quizzes on Python terms.  Here is a list of Python terms amd expressions that could be used to make such quizzes.   Cut and paste this list, or create your own,  to the text file.  Technically each lime should end in a mewline.  I am not sure if cut and paste will do this so keep that in mind if you use my list below.
 
 list
 [1,'a',7]
