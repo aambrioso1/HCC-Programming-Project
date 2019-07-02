@@ -49,7 +49,7 @@ alist=[] # A list used to store the second item of the quiz pairs.
 pos = 0
 for line in f1:
     if pos % 2 == 0: qlist.append(line.rstrip())
-    else: l2.append(line.rstrip())
+    else: alist.append(line.rstrip())
     pos += 1
 terms=dict(zip(qlist,alist))
 
@@ -84,7 +84,7 @@ for quizNum in range(num):
         random.shuffle(answerOptions)
         
         # Write the question and the answer options to the quiz file.   The next line shows the format of the quiz questions.
-        quizFile.write('%s. Which of the follwing best matches with %s?\n' % (questionNum + 1, questions[questionNum]))
+        quizFile.write('%s. Which of the following best matches with %s?\n' % (questionNum + 1, questions[questionNum]))
         for i in range(4):
             quizFile.write(' %s. %s\n' % ('ABCD'[i], answerOptions[i]))
         quizFile.write('\n')
