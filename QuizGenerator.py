@@ -1,7 +1,7 @@
 """
 A quiz generator by Alex Ambrioso (2019)
 
-This is my reworking of a clever program found in the nice online etext "Automate the Boring Stuff"  by Al Sweigart.  The program creates quizzes with questions and answers in random order, along with the answer key.  TIn the book he program was used create quizzes on states and their capitals.  I have generalized it so that it creates quizzes on any reasonable list of matched items.  To use my version you will need to create a text file called quizpairs.txt in the working directory.  This file should contain all the matching terms for the quizzes.  Every two lines of the file should contain a matched pair.   For example, if you would like to create quizzes on the states and their capitals, the file might start as follows:
+This is my reworking of a clever program found in the nice online etext "Automate the Boring Stuff"  by Al Sweigart.  The program creates quizzes with questions and answers in random order, along with the answer key.  In the book the program was used create quizzes on states and their capitals.  I have generalized it so that it creates quizzes on any reasonable list of matched items.  To use my version you will need to create a text file called quizpairs.txt in the working directory.  This file should contain all the matching terms for the quizzes.  Every two lines of the file should contain a matched pair.   For example, if you would like to create quizzes on the states and their capitals, the file might start as follows:
 
 Florida
 Tallahassee
@@ -53,7 +53,7 @@ for line in f1:
     pos += 1
 terms=dict(zip(qlist,alist))
 
-#  You should always close open files so that any resouces used by the file a freed up.
+#  You should always close open files so that any resouces used by the file are freed up.
 f1.close()
 
 
