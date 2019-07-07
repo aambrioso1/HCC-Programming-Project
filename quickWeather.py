@@ -1,9 +1,11 @@
 """
 quickWeather.py - Prints the weather for a location from the command line.
-A program from Automate the Boring Stuff
-I reworked it so that it finds the weather from the location assigned to the
+This program is similar to a program found in the online textbook "Automate the Boring Stuff."
+It uses api from openweathermap.org.  Since the writing of the textbook the site now requires keys.
+The keys for forecast data are free once you register with the website.  I rework the code for the url to
+and the key I was given.  I also reworked it so that it finds the weather from the location assigned to the
 location variable.   The code for running the program from the command line is
-commented out.   
+commented out but can be easily put back in.   
 """
 
 import json, requests, sys
