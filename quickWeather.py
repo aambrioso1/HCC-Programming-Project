@@ -10,6 +10,12 @@ commented out but can be easily put back in.
 
 import json, requests, sys
 
+"""
+Links to the documentation for these important libraries.
+https://docs.python.org/3/library/json.html
+https://docs.python.org/3/library/sys.html
+https://2.python-requests.org/en/master/
+"""
 
 """
 Compute location from command line arguments.  To use the command line 
