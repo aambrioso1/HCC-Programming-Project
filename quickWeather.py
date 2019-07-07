@@ -13,7 +13,7 @@ import json, requests, sys
 
 """
 Compute location from command line arguments.  To use the command line 
-take the take the triple quotes out around the if statemnt below and 
+take the take the triple quotes out around the if statement below and 
 comment out the location variable assignment.
 if len(sys.argv) < 2:
     print('Usage: quickWeather.py location')
