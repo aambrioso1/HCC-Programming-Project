@@ -64,12 +64,12 @@ print(w[5]['weather'][0]['main'], '-', w[5]['weather'][0]['description'])
 
 
 
-print('\n\nweather data: \n', w)
-print('\n\ntoday\'s weather data\n', w[0])
-print('\n\ntoday\'s weather list\n', w[0]['weather'])
+print('\n\nweather data w: \n', w)
+print('\n\ntoday\'s weather data w[0]:\n', w[0])
+print('\n\ntoday\'s weather list w[0][\'weather\']']:\n', w[0]['weather'])
 print()
 print()
 print(w[0]['weather'][0])
 print()
 print()
-print(w[0]['weather'][0]['main'])
+print(‘Today’s weather: w[0][\'weather\'][0][\'main\']:’, w[0]['weather'][0]['main'])
