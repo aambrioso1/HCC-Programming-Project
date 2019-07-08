@@ -8,7 +8,7 @@ location variable.   The code for running the program from the command line is
 commented out but can be easily put back in.   
 Ambrioso (Summer 2019)
 """
-# These are the libraries used in the program.
+# These are the libraries used by the program.
 import json, requests, sys
 
 """
