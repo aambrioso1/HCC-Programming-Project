@@ -6,8 +6,9 @@ The keys for forecast data are free once you register with the website.  I rewor
 and the key I was given.  I also changed the it so that it finds the weather from the location assigned to the
 location variable.   The code for running the program from the command line is
 commented out but can be easily put back in.   
+Ambrioso (Summer 2019)
 """
-
+# These are the libraries used in the program.
 import json, requests, sys
 
 """
