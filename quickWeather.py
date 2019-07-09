@@ -1,22 +1,19 @@
 """
 quickWeather.py - Prints the weather for a location from the command line.
 This program is similar to a program found in the online textbook "Automate the Boring Stuff."
-It uses api from openweathermap.org.  Since the writing of the textbook the site now requires keys.
-The keys for forecast data are free once you register with the website.  I rework the code for the url to
-and the key I was given.  I also changed the it so that it finds the weather from the location assigned to the
-location variable.   The code for running the program from the command line is
-commented out but can be easily put back in.   
+It uses api from openweathermap.org.  Since the writing of the textbook the site now requires keys. The keys for forecast data are free once you register with the website.  I reworked the code for the url to use the key I was given by the service.  I also changed the program so that it finds the weather from the location assigned to the location variable.   The code for running the program from the command line is commented out but can be easily put back in.
+   
 Ambrioso (Summer 2019)
 """
 # These are the libraries used by the program.
 import json, requests, sys
 
 """
-Links to the documentation for these important libraries.
+Links to the documentation for these important libraries and the home of JSON.
 https://docs.python.org/3/library/json.html
 http://json.org/
 https://docs.python.org/3/library/sys.html
-https://2.python-requests.org/en/master/
+https://pypi.org/project/requests/
 """
 
 """
@@ -50,17 +47,19 @@ print()
 print('Tomorrow:')
 print(w[1]['weather'][0]['main'], '-', w[1]['weather'][0]['description'])
 print()
-print('Day after tomorrow:')
+print('The day after tomorrow:')
 print(w[2]['weather'][0]['main'], '-', w[2]['weather'][0]['description'])
 print()
-print('Day after the day after tomorrow:')
+print('The day after the day after tomorrow:')
 print(w[3]['weather'][0]['main'], '-', w[3]['weather'][0]['description'])
 print()
-print('Day after the day after tomorrow the day after:')
+print('The day after the day after the day after tomorrow:')
 print(w[4]['weather'][0]['main'], '-', w[4]['weather'][0]['description'])
 print()
-print('Day after the day after tomorrow the day after the day after:')
+print('The day after the day after the day after the day after tomorrow:')
 print(w[5]['weather'][0]['main'], '-', w[5]['weather'][0]['description'])
+
+
 
 print('\n\nWeather data w: \n', w)
 ('\nToday\'s weather data w[0]:\n', w[0])
