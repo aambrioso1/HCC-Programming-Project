@@ -14,7 +14,15 @@ https://docs.python.org/3/library/json.html
 http://json.org/
 https://docs.python.org/3/library/sys.html
 https://pypi.org/project/requests/
-"""
+""”
+
+“””
+Some things to do:
+(1). Review format of JSON data.
+(2). Review indexing by print out other parts of the data.
+(3). Write a temperature conversion function and using it with the data.
+(4). Compute the average of the temperature data.
+“””
 
 """
 Compute location from command line arguments.  To use the command line 
