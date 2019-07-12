@@ -21,6 +21,7 @@ Some things to do:
 (1). Review format of JSON data.
 (2). Review indexing by print out other parts of the data.
 (3). Write a temperature conversion function and using it with the data.
+F = (9/5)*(K - 273) + 32
 (4). Compute the average of the temperature data.
 “””
 
