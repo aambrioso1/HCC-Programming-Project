@@ -15,7 +15,7 @@ Once you create this file in the appropriate directory, the working directory fo
 """
 
 """
-I thought it my be fun and practical to create quizzes on Python terms.  Here is a list of Python terms amd expressions that could be used to make such quizzes.   Cut and paste this list to the text file or create your own list.  Technically each line should end in a newline.  I am not sure if cut and paste will do this so keep that in mind if you use my list below.
+I thought it my be fun and practical to create quizzes on Python terms.  Here is a list of Python terms amd expressions that could be used to make such quizzes.   Cut and paste this list to the text file, quizpairs.txt, or create your own list.  Technically each line should end in a newline.  I am not sure if cut and paste will do this so keep that in mind if you use my list below.
 
 list
 [1,'a',7]
