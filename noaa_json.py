@@ -1,8 +1,7 @@
-import json, requests, sys, time
+import json, requests, time
 # import C:\Users\Alex\PycharmProjects\matplotlib\scatterplot.py
 
-#This is a module that I created to create
-# a scatter plot using matplotlib: 
+# This is a module that I created to create a scatter plot using matplotlib: 
 # 	https://matplotlib.org/index.html
 import plot as sp
 """
@@ -47,17 +46,28 @@ start = '20130808 15:00'
 end = '20130808 15:06'
 start2 = '20200104 14:00'
 end2 = '20200104 15:00'
-start3 = YEAR + MON + DAY + ' ' + str(int(HOUR) - 1) + ':' + MIN
+
+def start_hour(time):
+    time_str = str(int(time) - 1)
+    if len(time_str) == 1:
+        return '0' + time_str
+    else:
+        return time_str
+    
+# start3 = YEAR + MON + DAY + ' ' + str(int(HOUR) - 1) + ':' + MIN
+start3 = YEAR + MON + DAY + ' ' + start_hour(HOUR) + ':' + MIN
 end3 = YEAR + MON + DAY + ' ' + HOUR + ':' + MIN
 
-# Stations ID's for stations that around Tampa Bay and have temperature data available.
+print('time', start3, end3)
+
+# Stations that around Tampa Bay that have temperature data available.
 station1 = '8726520' # St Petersburg
 station2 = '8726384' # Port Manatee
 station3 = '8726607' # Old Port Tampa Bay
 station4 = '8726667' # Mckay Bay Entrance
 station5 = '8726724' # Clearwater Beach
 
-STATION = station3 # Pick one of the stations listed above
+STATION = station2 # Pick one of the stations listed above
 
 # Time Zones
 zone1 = 'gmt' # Greenwich Mean Time.
@@ -68,14 +78,23 @@ zone3 =  'lst_ldt' # Local Standard/Local Daylight Time. The time local to the r
 # This url is needed to request the jsom data from an NOAA station.  See 
 # 		https://tidesandcurrents.noaa.gov/api/ 
 # for details.
-url = f'https://tidesandcurrents.noaa.gov/api/datagetter?begin_date={start3}&end_date={end3}&station={STATION}&product=water_temperature&units=english&time_zone={zone2}&application=ports_screen&format=json'
+part1 = f'https://tidesandcurrents.noaa.gov/api/datagetter?'
+part2 = f'begin_date={start3}&end_date={end3}&station={STATION}'
+part3 = f'&product=water_temperature&units=english&time_zone={zone2}'
+part4 = f'&application=ports_screen&format=json'
+
+# url = f'https://tidesandcurrents.noaa.gov/api/datagetter?begin_date={start3}
+# &end_date={end3}&station={STATION}&product=water_temperature&units=english
+# &time_zone={zone2}&application=ports_screen&format=json'
+
+url = part1 + part2 + part3 + part4
 
 response = requests.get(url)
 response.raise_for_status()
 
 # Load JSON data into a Python variable.
 data = json.loads(response.text)
-# print(data)
+print(data)
 
 
 TIME_STR = f'The current time is = {TM}'
@@ -85,14 +104,17 @@ def pr():
 	"Prints asterisks to frame the output."
 	print('*' * REPEAT)
 
-# Print one hour of temperature data for the chosen station (STATION) along with the station location and time.
+# Print one hour of temperature data for the chosen station (STATION) along with 
+# the station location and time.
 pr()
 print('Station: ' + data['metadata']['name'])
 pr()
 print(TIME_STR)
 pr()
 d = data['data']
-print('Station data:\n', d)
+# print('Station data:\n', d)
+
+
 time_list = []
 temp_list = []
 for item in d:
