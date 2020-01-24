@@ -50,7 +50,7 @@ end2 = '20200104 15:00'
 start3 = YEAR + MON + DAY + ' ' + str(int(HOUR) - 1) + ':' + MIN
 end3 = YEAR + MON + DAY + ' ' + HOUR + ':' + MIN
 
-# Stations that around Tampa Bay that have temperature data available.
+# Stations ID's for stations that around Tampa Bay and have temperature data available.
 station1 = '8726520' # St Petersburg
 station2 = '8726384' # Port Manatee
 station3 = '8726607' # Old Port Tampa Bay
