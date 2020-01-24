@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import random as rd
 
-x_s = [i for i in range(1000)]
-y_s = [rd.randint(40, 80) for i in range(1000)]
+x_s = [i for i in range(10)]
+y_s = [rd.randint(40, 80) for i in range(10)]
 
 
 def plot(x_list, y_list):
