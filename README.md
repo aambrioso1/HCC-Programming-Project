@@ -8,3 +8,5 @@ plot.py:  A module that creatse a line graph given two lists.
 
 MadLib.py:   Demonstrates how to use interploted f-strings by generated random responses for a MadLib.
 
+comprehension.py: demonstrates using comprehension to construct lists, sets, and dictionaries.
+
