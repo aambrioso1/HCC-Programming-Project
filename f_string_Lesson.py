@@ -1,6 +1,7 @@
-# A Python Lesson by Alex Ambrioso (2019)
-# This lesson has is about manipulating strings, lists, and reading
-# and writing to files.
+"""
+A Python Lesson by Alex Ambrioso (2019)
+This lesson has is about manipulating strings, lists, and reading and writing to files.
+"""
 
 import random as rd # A library for generating random numbers.
 import os # A library for working with different operating systems we use it 
@@ -20,12 +21,10 @@ noun = 'dog'
 # adjlist = ['nice', 'mean', 'small', 'red', 'fluffy', 'scappy']
 # nounlist = ['boy', 'girl', 'man', 'woman', 'dog', 'cat']
 
-
-
-# We set the variable sentence to an f-string.   This is a formated string and
-# is new to Python 3.6 and 3.7.
-# It allows the programmer to format text in a simple way by putting placeholders,
-# {}, into text.  
+"""
+We set the variable sentence to an f-string.   This is a formated string and is new to Python 3.6 and 3.7.
+It allows the programmer to format text in a simple way by putting placeholders, # {}, into text.  
+"""
 
 # Once you understand the program as is remark out sentence below and take the hash mark
 # away from the second version of sentence.   Also remark out adjective,
