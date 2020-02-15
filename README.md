@@ -10,3 +10,9 @@ MadLib.py:   Demonstrates how to use interploted f-strings by generated random r
 
 comprehension.py: demonstrates using comprehension to construct lists, sets, and dictionaries.
 
+QuizGenerator.py: Generates multiple-choice questions.   Base on a program in Al Sweigart's nice book "Automate the Boring Stuff."
+
+
+
+
+
