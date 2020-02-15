@@ -12,7 +12,7 @@ comprehension.py: demonstrates using comprehension to construct lists, sets, and
 
 QuizGenerator.py: Generates multiple-choice questions.   Base on a program in Al Sweigart's nice book "Automate the Boring Stuff."
 
-RegexLesson:  This program use the re library to search the text in a file, regex.txt, for email addresses and phone numbers.  It copies
+RegexLesson:  This program uses the re library to search the text in a file, regex.txt, for email addresses and phone numbers.  It copies
 the emails and phone numbers it finds to a list called matches and prints them out neatly in a standard format. 
 
 
