@@ -47,13 +47,13 @@ print(sentence)
 # system is using for our IDE.  Then we create a path variable for that directory so
 # we can write and read to and from it.
 
-""" These three quotes and the three below will turn everything in between to a string
+""" 
+These three quotes and the three below will turn everything in between to a string
 so the interpreter will ignore it.   
 Once you understand the program above, read through the rest.   
 Then take out the 6 quotes and this remark and run the program again.  
 
 path = os.getcwd()
-
 
 content = os.listdir(path)
 print(f"The current working directory is {path}")
