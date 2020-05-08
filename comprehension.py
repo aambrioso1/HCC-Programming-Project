@@ -1,5 +1,5 @@
 """
-Build a list in three ways:
+Build a list in three differnt ways:
     (1) Using a for loop.
     (2) Using a map function.
     (3) Using comprehension.
