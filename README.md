@@ -15,7 +15,7 @@ QuizGenerator.py: Generates multiple-choice questions.   Base on a program in Al
 RegexLesson:  This program uses the re library to search the text in a file, regex.txt, for email addresses and phone numbers.  It copies
 the emails and phone numbers it finds to a list called matches and prints them out neatly in a standard format. 
 
-
+CountNeighbors:  Sketch of a program to count x's, o's, and blanks on a tic-tac-toe board
 
 
 
