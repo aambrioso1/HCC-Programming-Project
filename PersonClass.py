@@ -1,9 +1,14 @@
+#  You can find a nice explanation of Python classes here:  https://realpython.com/python3-object-oriented-programming/
+# In fact, I highly recommend Real Python as a great website for learning Python.
+
+
 class Person:
   # Class attribute
   species = 'human'
   
+ # Associates an instance of the class with a description 
   def __str__(self):
-    return f"{self.name} is a {self}."
+    return f'{self.name} is a {self.species}.'
      
   # instance attributes
   def __init__(self, name, age):
@@ -17,6 +22,7 @@ class Person:
   def responds(self, phrase):
     return f'{self.name}, replies {phrase}.'
 
+# Inheritance
 class Woman(Person):
   gender = 'female'
   likes = 'shoes'
