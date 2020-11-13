@@ -1,4 +1,12 @@
-# A script for copying a file over and over again.
+"""
+A script for make mulitple copies of a file.
+
+This program is based on Chapter 10: Organizing files of 
+Al Swiegart's nice book Automate the Boring Stuff 
+You can find Automate the Boring Stuff here: https://automatetheboringstuff.com/
+There is lots more information about organizing files in the book. 
+"""
+
 
 # import standard libraries
 import shutil, os
