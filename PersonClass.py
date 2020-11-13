@@ -37,3 +37,11 @@ class Man(Person):
 
   def greets(self, phrase='what\'s your sign'):
     return super().greets(phrase)
+
+class Classroom():
+  def __init__(self, person_list): #[ ('Alex', 23), ('Samantha', 21), ]
+    self.person_list = [Person(item[0], item[1]) for item in person_list]
+
+
+
+  

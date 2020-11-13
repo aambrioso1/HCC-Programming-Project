@@ -1,4 +1,4 @@
 fruits = ['banana', 'apple', 'mango']
-for index in range(len(fruits)):
-	print ('Current fruit :'), fruits[index]
+for fruit in fruits:
+	print (f'The current fruit is: {fruit}.')
 	print ("Good bye!")
