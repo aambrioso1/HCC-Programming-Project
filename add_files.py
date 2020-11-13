@@ -1,5 +1,5 @@
 """
-A script for make multiple copies of a file.
+A script for making multiple copies of a file.
 
 This program is based on Chapter 10: Organizing files of 
 Al Swiegart's nice book Automate the Boring Stuff 
