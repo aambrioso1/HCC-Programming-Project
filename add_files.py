@@ -7,7 +7,6 @@ You can find Automate the Boring Stuff here: https://automatetheboringstuff.com/
 There is lots more information about organizing files in the book. 
 """
 
-
 # import standard libraries for working with files (shutil), different operating systems (os).
 # and file paths (pathlib).
 import shutil, os
