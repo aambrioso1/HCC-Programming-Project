@@ -11,16 +11,5 @@ def HiLowGame():
 	if result = L then Low = Guesss
 	if result = C then return
 	repeat()
-HiLowGame()
 
-#def repeat():
-#	done = raw_input("Are you done? n/y: ")
-#	if done == "y":
-#		print "Thank you for coming"
-#		exit()
-#	elif done == "n":
-#		print "Ok"
-#		evenfinder()
-#	else:
-#		print "START TAKING ME SERIOUS"
-#repeat()
+HiLowGame()
