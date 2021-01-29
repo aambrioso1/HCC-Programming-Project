@@ -1,11 +1,11 @@
 """
 We take a text file containing points that draw a fish and use it to generate lists we can 
-manipulate in Python.   Then we use matplot and numpy to draw the fish and apply
-transformation to the point with matrix multiplication.
+manipulate in on.   Then we use matplot and numpy to draw the fish.  Then we apply
+transformations to the point with matrix multiplication to shift the point around.
 """
-import matplotlib.pyplot as plt
-import numpy as np
-import math
+import matplotlib.pyplot as plt # used to plot the points
+import numpy as np # So we can create matrices and muliply them
+import math # used for the trigonometric functions
 
 with open('fish_points.txt', 'r') as reader:
 	line_list = []
@@ -51,7 +51,7 @@ for point in points:
 	transformed_points.append(np.matmul(shear,point))
 """
 # We multiply every point by one of the transforms to create list of the transformed points
-transformed_points = [np.matmul(shear,point) for point in points]
+transformed_points = [np.matmul(rotate,point) for point in points]
 
 
 # Separate the x's and y's of the transformed point pairs
@@ -67,5 +67,5 @@ plt.scatter(x_s, y_s, marker='o')
 # Plot the transformed points
 plt.scatter(T_x_s, T_y_s, marker='o')
 
-
+# Show the plot
 plt.show()
