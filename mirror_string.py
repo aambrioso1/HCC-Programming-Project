@@ -20,5 +20,3 @@ def mirror(string):
 # The backslash is so that the quotes will be printed rather than interpreted.
 print(f"mirror('word') = {mirror('word')}")
 print(f"mirror('Devan') = {mirror('Devan')}")
-
-
