@@ -19,7 +19,7 @@ Here are the forms of comprehension in Python suggested by the article:
 (5) new_list = [expression (if conditional) for member in iterable]
 (6) At the end, I generate a set and a dictionary using comprehension.
 
-# Every list comprehension has an member, an expression, and an iterable.
+# Every list comprehension has three parts:  (1) a member, (2) an expression, and (3) an iterable.
 # A conditional is optional and can be used to control membership.
 
 
@@ -47,8 +47,9 @@ print('list3 = ', list3)
 
 # Examples using conditionals along with comprehension.
 # (4) new_list = [expression for member in iterable (if conditional)]
-vowels = {i for i in alphabet if i in 'aeiou'}
-print('The vowels are', vowels)
+vowels1 = {i for i in alphabet if i in 'aeiou'}
+print('The vowels are', vowels1)
+
 
 # (4) new_list = [expression for member in iterable (if conditional)]
 
@@ -59,6 +60,9 @@ print('The consonants are', consonants)
 # (5) new_list = [expression (if conditional) for member in iterable]
 delete_vowels = [letter if letter not in 'aeiou' else '*' for letter in alphabet]
 print('Letters with vowels marked', delete_vowels)
+
+# vowels2 = [i (if i in 'aeiou') for i in alphabet]
+# print('The vowels are', vowels2)
 
 # (6) Comprehension can also be used to generate a dictionary.  
 # Create a dictionary using comprehension.

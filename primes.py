@@ -13,7 +13,7 @@ def ZeroOut(list,n):
 #Then it calls ZeroOut to zero out all non-primes.  
 #Finally, a list without the zeros is created and printed
 
-last=4000 #Sets last element of list to be check for all primes
+last=10000 #Sets last element of list to be check for all primes
 StartList=[i for i in range(2,last+1)] #Creates a list of the integers from 1 to last
 for i in range(2,len(StartList)): 
 	StartList=ZeroOut(StartList,i) #Iterates through the element of StartList
