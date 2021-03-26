@@ -1,3 +1,12 @@
+"""
+A lesson on functions in Python.
+
+For an excellent and more comprehensive explanation see:
+https://realpython.com/defining-your-own-python-function/
+
+"""
+
+# A dictionary of customer numbers, names, and monthly spending.
 customers = {
 '001': ['Alex', 100.00], 
 '314': ['Sonya', 25.25], 
@@ -17,18 +26,18 @@ def spent(s):
 
 print(f"Joseph spent ${spent('231')}")
 
-# simple average value function with positional arguments
+# A simple average value function with positional arguments.
 def avg1(v1,v2,v3,v4):
 	average = (v1 + v2 + v3 + v4) / 4
 	return average
 
 """
-This creates an error since there are too many positional arguments
+This creates an error since there are too many positional arguments.
 print(f'average  = {avg1(10,20,30,40,50)}')
 """
 
-# *args allows have a variable number of positional arguments.  
-# Think of it a create a list of the arguments called args with a length of len(args)
+# *args allows you to have a variable number of positional arguments.  
+# Think of it as creating a list of the arguments called args with a length of len(args).
 def avg2(*args):
 	sum = 0
 	for item in args:
@@ -51,7 +60,7 @@ print(f'interest = {total_int(1000)}')
 # **kwargs allows for a variable number of keyword arguments.   
 # Think of it as creating a dictionary called kwargs with keys 
 # being the stings of the keyword names and the values being the value
-# associate with each keyword
+# associate with each keyword.
 def function(*args, **kwargs):
 	sum = 0
 	for item in args:
