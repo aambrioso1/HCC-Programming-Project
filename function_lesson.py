@@ -62,7 +62,7 @@ def function(*args, **kwargs):
 	
 
 # Our function will take any number of positional arguments and keyword arguments and return the sum of the numbers.
-# Note that we are assuming the arguments can be added togeter
+# Note that we are assuming the arguments can be added together.
 
 print(f'total = {function(10, 20, 30, 40, 50, a=60, b=70, c=80)}')
 
