@@ -57,7 +57,8 @@ with open(f'combined_files/combined_text_files.txt', 'w') as writer:
 # Would combine file1, file2, and file3 into a file called file name.
 # Without -n the command would combine the four files into a new file.
 
-# Finally we add some error handling in case the text files don't exist or the directory already exists
+# Finally can we add some error handling in case the text files don't exist or the directory already exists
+# Below is an example that illustrates the idea.
 
 """
 try:
