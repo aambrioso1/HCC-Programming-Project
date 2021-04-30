@@ -9,37 +9,38 @@ Additionally it will include:
 
 The program also provides a simple example of how a command line script can be used to
 leverage Python to help get work done.
+
+Let's start by writing code that will create a directory to put the new file into
+
+First we process the command line arguments and assign the variable names to each text file
+We will call them text_name1, text_name2, text_name3, ...
+
+The built in sys directory has facilities to process the command line arguments.
+Specifically sys.argv returns a list of all the command line arguments.
+For example if we input the following command:
+
+>python combine_files file1 file2 file3
+
+Then sys.argv = ['python', combine_files, file1, file2, file3]
+
+We will open the files, read them, and combine the text into a single string, new_text.
+We use sys.argv[2:] to take the slice of the list of command line arguments starting with the first
+text file name.
 """
-
-
-# Let's start by writing code that will create a directory to put the new file into
-
-# First we process the command line arguments and assign the variable names to each text file
-# We will call them text_name1, text_name2, text_name3, ...
-
-# The built in sys directory has facilities to process the command line arguments.
-# Specifically sys.argv returns a list of all the command line arguments
-# for example if we input the following command
-# >python combine_files file1 file2 file3
-# Then sys.argv = ['python', combine_files, file1, file2, file3]
-
-
-# We will open the files, read them, and combine the text into a single string, new_text.
-# We use sys.argv[2:] to take the slice of the list of command line arguments starting with the first
-# text file name.
-
 import sys
 
-# print(f'sys.argv = {sys.argv}')
+print(f'sys.argv = {sys.argv}')
+
 new_text = ''
 for arg in sys.argv[1:]:
 	with open(f'temp/{arg}.txt', 'r') as reader:
 		new_text += reader.read() + '\n'
 
-# Next we create a directory to put the new text into
-
-# The built in os module has facilities to help manage the local computer.
-# We use it here to make the new directory
+"""
+#Next we create a directory to put the new text into.
+#The built in os module has facilities to help manage the local computer.
+#We use it here to make the new directory.
+"""
 
 import os
 os.mkdir('combined_files')
