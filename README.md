@@ -9,7 +9,7 @@ plot.py:  A module that creates a line graph given two lists of numbers.
 
 MadLib.py:   Demonstrates how to use interploted f-strings by generated random responses for a MadLib.
 
-comprehension.py: demonstrates using comprehension to construct lists, sets, and dictionaries.
+comprehension.py: This is a lesson in comprehension.   Comprehension is a nice way to build lists, sets, and dictionaries.
 
 QuizGenerator.py: Generates multiple-choice quiz questions.   Based on a program in Al Sweigart's nice book "Automate the Boring Stuff."
 
@@ -21,6 +21,12 @@ monte_carlo_pi.py:  Uses a Monte Carlo technique to estimate Pi.   Displays a ni
 library to illustrate the idea.
 
 counting_colorings.py:   Counts the number of colorings possible if n walls are colored with n colors.  Also partitions the set of all colors by the number of colors used.  Uses itertools product function to comtrol the number of nested for loops.  The itertools library contains functions for creating iterators for efficient looping.
+
+f_string_lesson:  This lesson has is about manipulating strings, lists, and reading and writing to files.
+
+function_lesson:  A lesson on functions in Python.
+
+monte_carlo_pi:  A visual demo of Monte Carlo technique for calculating Pi.
 
 
 

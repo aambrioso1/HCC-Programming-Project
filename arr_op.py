@@ -1,3 +1,10 @@
+# arr_op.py
+#!/usr/bin/env python3
+"""Example of a numpy array operation.   Specifically elu and eluprime.
+
+See:  https://en.wikipedia.org/wiki/Rectifier_(neural_networks)#ELU
+"""
+
 import numpy as np
 x = np.array([[-1, 2], [3, 4]])
 

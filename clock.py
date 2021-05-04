@@ -1,4 +1,6 @@
-# Project #9, ASCII Clock
+#!/usr/bin/env python
+
+# ASCII Clock Project
 
 # A project to display times using a classical seven-segment display of given 
 # times input in a 24 hour format.
@@ -53,11 +55,25 @@ def clock(tm):  # tm is a string representing a time in a 24-hour format.
 # We run the progam by iterating over a list of times.
 
 # A list of times.        
-tm_list = ['10:28','04:20','18:28','16:39', '07:57','12:34', '16:57', '18:09', 'end']
+tm_list = ['09:30','09:31','09:32','09:33', '09:34','09:35', 'end']
 
-# 
+N = 38 # Used to count asterisks in print statements
+
+# Print out clock face for all the times in the list.
+"""
 for i in tm_list: 
 	clock(i)
-	n = 38
 	print(n * '*')
+""" 
+# Print out one face with the current time.
+from datetime import datetime
+right_now = datetime.now()
+current_time = right_now.strftime('%H:%M')
+# print(f'{current_time=}') # Prints out current time in the format '%H:%M'.
+
+
+print(N * '*')
+clock(current_time)
+print(N * '*')
+
 

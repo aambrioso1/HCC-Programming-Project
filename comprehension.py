@@ -1,7 +1,5 @@
-"""
+"""This is a lesson in comprehension.   Comprehension is a nice way to build lists, sets, and dictionaries
 
-This is a lesson in comprehension.   Comprehension is a nice way to build lists, sets, and dictionaries
-e
 In Python you can build a list in three differnt ways:
     (1) Using a for loop.
     (2) Using a map function.
@@ -21,8 +19,6 @@ Here are the forms of comprehension in Python suggested by the article:
 
 # Every list comprehension has three parts:  (1) a member, (2) an expression, and (3) an iterable.
 # A conditional is optional and can be used to control membership.
-
-
 """
 # We will generate lists using this string.
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
