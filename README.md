@@ -3,8 +3,7 @@ A repository for programs and projects for HCC Engineering Society
 
 A description of some of the programs in repository
 
-noaa_json.py:  This program shows how to retrieve JSON data from stations tracked by the NOAA in water ports throughout the USA. 
-
+noaa_json.py:  This program shows how to retrieve JSON data from stations tracked by the NOAA in water port
 plot.py:  A module that creates a line graph given two lists of numbers.
 
 MadLib.py:   Demonstrates how to use interploted f-strings by generated random responses for a MadLib.

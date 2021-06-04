@@ -67,7 +67,7 @@ station3 = '8726607' # Old Port Tampa Bay
 station4 = '8726667' # Mckay Bay Entrance
 station5 = '8726724' # Clearwater Beach
 
-STATION = station5 # Pick one of the stations listed above
+STATION = station1 # Pick one of the stations listed above
 
 # Time Zones
 zone1 = 'gmt' # Greenwich Mean Time.
@@ -79,7 +79,7 @@ zone3 =  'lst_ldt' # Local Standard/Local Daylight Time. The time local to the r
 # 		https://tidesandcurrents.noaa.gov/api/ 
 # for details.
 part1 = f'https://tidesandcurrents.noaa.gov/api/datagetter?'
-part2 = f'begin_date={start3}&end_date={end3}&station={STATION}'
+part2 = f'begin_date={start2}&end_date={end2}&station={STATION}'
 part3 = f'&product=water_temperature&units=english&time_zone={zone2}'
 part4 = f'&application=ports_screen&format=json'
 

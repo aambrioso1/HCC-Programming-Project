@@ -79,7 +79,7 @@ zone3 =  'lst_ldt' # Local Standard/Local Daylight Time. The time local to the r
 # 		https://tidesandcurrents.noaa.gov/api/ 
 # for details.
 part1 = f'https://tidesandcurrents.noaa.gov/api/datagetter?'
-part2 = f'begin_date={start3}&end_date={end3}&station={STATION}'
+part2 = f'begin_date={start}&end_date={end}&station={STATION}'
 part3 = f'&product=water_temperature&units=english&time_zone={zone2}'
 part4 = f'&application=ports_screen&format=json'
 
