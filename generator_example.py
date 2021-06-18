@@ -3,7 +3,7 @@
 Rather than create a list to save the indices, we create a generator that will iterate through all of the indices.
 There are several advantages:
 (1)  Less memory is used.
-(2)  The code is easier to read than it would be if we appended the indices to a list. [EP]
+(2)  The code is easier to read than it would be used a list and appended indices to it. [EP]
 """
 import requests
 
