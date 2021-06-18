@@ -13,25 +13,24 @@ response = requests.get(url)
 if response.status_code == 404:
 	raise SystemExit(f'HTTP response status: {res.status_code}') # Exit with message if URL is bad
 
+book = response.text[2440:] # book text starts at index 2440
 
-book = response.text[2440:] # book starts at index 2440
-
+# define the generator just like a function except we use yield instead of return.
 def index_of_the_iterator(text):
 	for i, _ in enumerate(text):
 		if text[i:i+4].lower() == 'the ':
 			yield i
 
-it = index_of_the_iterator(book)
+it = index_of_the_iterator(book) # create the iterator
 
+# We use next() to generate the first three indices.
 print(next(it))
 print(next(it))
 print(next(it))
 
-index = list(index_of_the_iterator(book))
-print(index[:20])
-print('\n***********************************')
-print(book[155:170])
-
+indices = list(index_of_the_iterator(book)) # We use the iterator to generate a list
+print(indices[:20]) # print the first 20 indices.
+print(f'The text at book[155:159] is "{book[155:159]}".') # We check the text at index 155
 
 
 
