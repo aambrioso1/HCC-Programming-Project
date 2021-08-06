@@ -20,7 +20,7 @@ response = requests.get(url)
 if response.status_code == 404:
 	raise SystemExit(f'HTTP response status: {res.status_code}') # Exit with message if URL is bad
 
-START = 2440 # start of the texts of the book
+START = 2440 # start of the book
 
 book = response.text[START:] # book text starts at index 2440
 my_word = 'the '
