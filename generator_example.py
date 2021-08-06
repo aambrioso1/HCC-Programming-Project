@@ -9,7 +9,7 @@ There are several advantages:
 appended indices to it.
 
 Interesting addition
-Create shell command htat would allow the user to provide the url.
+Create shell command that would allow the user to provide the url.
 """
 import requests
 
