@@ -43,4 +43,4 @@ print(indices[:20]) # print the first 20 indices.
 
 start_index = indices[0]
 end_index = indices[0] + len(my_word)
-print(f'The text at {start_index} is "{book[start_index:end_index]}".') # We check the text at index 155
+print(f'The word located at {start_index} is "{book[start_index:end_index]}".') # We check the text at index 155
