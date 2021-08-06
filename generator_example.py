@@ -3,7 +3,12 @@
 Rather than create a list to save the indices, we create a generator that will iterate through all of the indices.
 There are several advantages:
 (1)  Less memory is used.
-(2)  The code is easier to read than it would be used a list and appended indices to it. [EP]
+(2)  The code is easier to read than it would be used a list and appended indices to it. [EP}
+
+To do
+Generalize to any word
+Create a book retrieval shell command
+Remove any language from EP
 """
 import requests
 
@@ -14,23 +19,21 @@ if response.status_code == 404:
 	raise SystemExit(f'HTTP response status: {res.status_code}') # Exit with message if URL is bad
 
 book = response.text[2440:] # book text starts at index 2440
+my_word = 'the '
 
 # define the generator just like a function except we use yield instead of return.
-def index_of_the_iterator(text):
+def index_of_word_iterator(text, word):
 	for i, _ in enumerate(text):
-		if text[i:i+4].lower() == 'the ':
+		if text[i:i+len(word)].lower() == word:
 			yield i
 
-it = index_of_the_iterator(book) # create the iterator
+it = index_of_word_iterator(book, my_word) # create the iterator
 
 # We use next() to generate the first three indices.
 print(next(it))
 print(next(it))
 print(next(it))
 
-indices = list(index_of_the_iterator(book)) # We use the iterator to generate a list
+indices = list(index_of_word_iterator(book, my_word)) # We use the iterator to generate a list
 print(indices[:20]) # print the first 20 indices.
 print(f'The text at book[155:159] is "{book[155:159]}".') # We check the text at index 155
-
-
-
