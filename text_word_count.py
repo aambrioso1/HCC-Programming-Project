@@ -1,14 +1,19 @@
 """
 Written by Ambrioso @ 2020
-A program to count words in text and confirm Zipf's Law.
-Note the program using a module plot.py that must be in the working directory.
+
+A program to count words in text and confirm Zipf's Law:
+https://en.wikipedia.org/wiki/Zipf%27s_law
+Nice Video about the law:  https://youtu.be/fCn8zs912OE
+(Law and graph introduced from:  0 to 1:20 min)
+
+Note the program using a module my_plot_module.py that must be in the working directory.
 """ 
 # Requests is an elegant and simple HTTP library for Python, built for human beings.
 import requests as req
 import re # Regular expression library.  Part of standard library.
 import collections as col# Standard libary. High-performance container datatypes
 import os # Standard library.  Operating system interfaces. 
-import plot # My module for plotting a line graph
+import my_plot_module as my_plot # My module for plotting a line graph
 
 # Use requests to collected text from various websites (mostly Gutenberg.org).
 r1 = req.get('http://www.gutenberg.org/cache/epub/5/pg5.txt') # Constitution
@@ -52,10 +57,11 @@ for pair in word_count_pairs:
     print(f'"{word}" occurs {count} times')
 
 # Plot the rank number against the count.
-# This graph should illustrate Zipf's Law.
+# This graph will illustrate Zipf's Law.
+
 xlist = []
 ylist =  count_list
 for i in range(NUM):
     xlist.append(i)
     
-plot.pl(xlist,ylist)
+my_plot.plot(xlist,ylist)
