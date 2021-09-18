@@ -39,9 +39,11 @@ def words(text): return re.findall(r'\w+', text.lower())
 
 words_in_text = words(txt)
 
-#  Count the words in the text and find the top NUM words using methods for
-# the collections library.
+# Count the words in the text and find the top NUM words using methods
+# found in the collections library.
+
 word_counts = col.Counter(words_in_text)
+
 NUM = 100
 # The most_common(NUM) methods finds the most common words in text.
 word_count_pairs = col.Counter(word_counts).most_common(NUM)
@@ -49,19 +51,17 @@ word_count_pairs = col.Counter(word_counts).most_common(NUM)
 # Print out top num workds
 count_list = []
 print(f'Top {NUM} words in our text.')
-print('*'*35)
+print(50 * '*')
 for pair in word_count_pairs:
-    count = pair[1]
-    word = pair[0]
+    word, count = pair
     count_list.append(count)
     print(f'"{word}" occurs {count} times')
 
 # Plot the rank number against the count.
 # This graph will illustrate Zipf's Law.
 
-xlist = []
+xlist = [i for i in range(NUM)]
 ylist =  count_list
-for i in range(NUM):
-    xlist.append(i)
-    
+
+# Use my my_plot module with its one method to create the graph    
 my_plot.plot(xlist,ylist)
