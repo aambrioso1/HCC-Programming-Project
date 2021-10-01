@@ -3,7 +3,7 @@ import json, requests, time
 
 # This is a module that I created to create a scatter plot using matplotlib: 
 # 	https://matplotlib.org/index.html
-import plot as sp
+import plot
 """
 Example of using the request package for json data from NOAA.
 Here are Links to the documentation for these important libraries and the home of JSON.
@@ -126,4 +126,4 @@ print(f'time list = {time_list}')
 print(f'temp list = {temp_list}')
 
 x_s = [-6*i for i in range(len(temp_list))]
-sp.plot(x_s, temp_list)
+plot.pl(x_s, temp_list)
