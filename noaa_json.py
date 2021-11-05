@@ -3,9 +3,9 @@ import json, requests, time
 
 # This is a module that I created to create a scatter plot using matplotlib: 
 # 	https://matplotlib.org/index.html
-import plot
+import plot # My own plotting module
 """
-Example of using the request package for json data from NOAA.
+Example using requests to access json data from NOAA.
 Here are Links to the documentation for these important libraries and the home of JSON.
 https://docs.python.org/3/library/json.html
 https://docs.python.org/3/library/sys.html
@@ -42,8 +42,8 @@ def start_hour_day(str_hour, str_day):
 	else:
 		return ['23', str(day - 1)]
 
-start = '20130808 15:00'
-end = '20130808 15:06'
+start = '20211019 00:00'
+end = '20211019 08:00'
 start2 = '20200104 14:00'
 end2 = '20200104 15:00'
 
@@ -125,5 +125,5 @@ for item in d:
 print(f'time list = {time_list}')
 print(f'temp list = {temp_list}')
 
-x_s = [-6*i for i in range(len(temp_list))]
+x_s = [6*i for i in range(len(temp_list))]
 plot.pl(x_s, temp_list)
