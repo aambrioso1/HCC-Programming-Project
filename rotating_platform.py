@@ -1,8 +1,16 @@
-# https://toptechboy.com/9-axis-imu-lesson-21-visualizing-3d-rotations-in-vpython-using-quaternions/
+# rotating_platform.py 
 
-# implements a platform that allows for animating yaw, pitch, and roll
+# Implements a platform that allows for animating yaw, pitch, and roll
 # and roll simultaneous at different proportion.   The variables
 # yaw_factor, pitch_factor, and roll_factor control the proportions.
+# Adjust this factors to explore the behavior of the platform.
+
+# Base on code found here:
+# https://toptechboy.com/9-axis-imu-lesson-21-visualizing-3d-rotations-in-vpython-using-quaternions/
+# by Paul McWhorter 
+
+# Best derivation I found for Rodriques Rotation Formula:
+# https://mathworld.wolfram.com/RotationFormula.html
 
 from vpython import *
 from time import *
@@ -40,6 +48,8 @@ DEG = 15 # Use for static pitch
 y = vector(0,1,0)
 
 # These variables control the rate of yaw, pitch, and roll
+# Try varying these proportions
+
 yaw_factor = 1
 pitch_factor = 1/5
 roll_factor = 10
@@ -65,7 +75,9 @@ while(True):
         # up vector
         v = cross(s,k)
 
-        vrot=v*cos(roll)+cross(k,v)*sin(roll)+k*dot(k,v)*(1-cos(roll))
+        # Rodriques rotation formula included here
+        # Note the McWhorter leave of the last term in his tutorial
+        vrot=v*cos(roll) + cross(k,v)*sin(roll) + k*dot(k,v)*(1-cos(roll))
 
         frontArrow.axis = k
         frontArrow.length = 4
