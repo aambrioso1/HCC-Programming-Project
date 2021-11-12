@@ -1,9 +1,9 @@
 # rotating_platform.py 
 
 # Implements a platform that allows for animating yaw, pitch, and roll
-# and roll simultaneous at different proportion.   The variables
+# and roll simultaneous in different proportions.   The variables
 # yaw_factor, pitch_factor, and roll_factor control the proportions.
-# Adjust this factors to explore the behavior of the platform.
+# Adjust this factors and explore the behavior of the platform.
 
 # Base on code found here:
 # https://toptechboy.com/9-axis-imu-lesson-21-visualizing-3d-rotations-in-vpython-using-quaternions/
