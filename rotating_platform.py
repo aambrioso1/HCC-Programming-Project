@@ -1,5 +1,9 @@
 # https://toptechboy.com/9-axis-imu-lesson-21-visualizing-3d-rotations-in-vpython-using-quaternions/
 
+# implements a platform that allows for animating yaw, pitch, and roll
+# and roll simultaneous at different proportion.   The variables
+# yaw_factor, pitch_factor, and roll_factor control the proportions.
+
 from vpython import *
 from time import *
 import numpy as np
@@ -32,14 +36,25 @@ toDeg=1/toRad
 bBoard=box(length=6,width=2,height=.2,opacity=0.8,pos=vector(0,0,0))
 myObj = compound([bBoard])
 
-DEG = 75
+DEG = 15 # Use for static pitch
 y = vector(0,1,0)
 
+# These variables control the rate of yaw, pitch, and roll
+yaw_factor = 1
+pitch_factor = 1/5
+roll_factor = 10
 
 while(True):
-    pitch = DEG * toRad
-    for yaw in np.arange(0, 12*np.pi, 0.01):
-        rate(60)
+    # pitch = DEG * toRad # use for static pitch
+    # roll = DEG * toRad # use for static roll
+
+    for angle in np.arange(0, 12*np.pi, 0.01):
+        
+        yaw = angle * yaw_factor
+        pitch = angle * pitch_factor
+        roll = angle * roll_factor
+        
+        rate(100)
         
         # forward vector
         k = vector(cos(yaw)*cos(pitch), sin(pitch), sin(yaw)*cos(pitch))
@@ -50,15 +65,17 @@ while(True):
         # up vector
         v = cross(s,k)
 
+        vrot=v*cos(roll)+cross(k,v)*sin(roll)+k*dot(k,v)*(1-cos(roll))
+
         frontArrow.axis = k
         frontArrow.length = 4
-        sideArrow.axis = s
+        sideArrow.axis = cross(k,vrot)
         sideArrow.length = 2
-        upArrow.axis = v
+        upArrow.axis = vrot
         upArrow.length = 1
 
         myObj.axis = k
-        myObj.up = v
+        myObj.up = vrot
 
 sleep(60)
 
