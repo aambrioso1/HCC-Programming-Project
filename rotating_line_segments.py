@@ -1,14 +1,15 @@
 # rotating_line_segments.py
 
 """
+A group of functions useful for rotating vectors.
+Includes a plot and an animation
+"""
 
-
+"""
 For information on the connection between the matrices and the trigonometry
 involved in the rotations see "Examples in 2 dimensions" in this article:
 https://en.wikipedia.org/wiki/Transformation_matrix
-"""
 
-"""
 For computing the angle between two vectors in numpy.
 https://stackoverflow.com/questions/2827393/angles-between-two-n-dimensional-vectors-in-python
 
