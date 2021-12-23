@@ -62,14 +62,20 @@ def unit_vector(v):
 	"""
 	return v / LA.norm(v)
 
-def find_vector(vector, theta, l):
-	"""Finds a new vector of length by rotating v1 clockwise
-	a scaling the vector to L
+def create_vector(p0,p1):
+	x0, y0 = p0
+	x1, y1 = p1
+	return np.array([x1 - x0, y1 - y0])
+
+def find_point(point1, point2, theta, l):
+	"""Finds a new point by creating a vector a from point1 to point2 
+	and rotating it clockwise and scaling it by l
 	""" 
+	vector = create_vector(point1, point2)
 	new_v = rotate_clockwise(vector,theta)
 	new_dir = new_v/LA.norm(new_v)
-	return l * new_dir
-
+	return l * new_dir + np.array(point1)
+"""
 theta = 2 * np.pi/3 # direction of orginal vector
 h = 5 # length of original vector
 
@@ -80,20 +86,37 @@ v0 = h * np.array([np.cos(theta), np.sin(theta)])
 x0 = v0[0]
 y0 = v0[1]
 
-v1 = find_vector(v0, theta_rot, l) # new vector
+# v1 = find_vector(v0, theta_rot, l) # new vector
+x1 = v1[0]
+y1 = v1[1]
+
+print(f"P2 is ({x1},{y1})")
+"""
+
+puck_pos = [2,50]
+player_pos = [10,20]
+theta_rot = np.pi/2
+l = 5
+x0, y0 = puck_pos
+
+v1 = find_point(player_pos,puck_pos, theta_rot, l) # new vector
+
 x1 = v1[0]
 y1 = v1[1]
 
 print(f"P2 is ({x1},{y1})")
 
+
 fig = plt.figure() # create a plot
 ax = fig.add_subplot(111) # place plot in fig
 
-# Plot the original vector and the rotated vector
-plt.plot([0, x0],[0,y0]) 
-plt.plot([0, x1],[0,y1])
 
-plt.axis([-5,5,-5,5]) # Determine the range of the x and y axes.
+
+# Plot the original vector and the rotated vector
+plt.plot([player_pos[0], x0],[player_pos[1],y0]) 
+plt.plot([player_pos[0], x1],[player_pos[1],y1])
+
+plt.axis([0,20,0,60]) # Determine the range of the x and y axes.
 plt.grid(True) # Add grid lines
 ax.set_aspect('equal', adjustable='box') # Scales the axis the same
 plt.show() # Outputs the plot
